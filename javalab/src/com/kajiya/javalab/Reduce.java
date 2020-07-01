@@ -34,6 +34,9 @@ public class Reduce {
 		} catch (NoSuchElementException e) {
 			longTest = 100l;
 		}
+		System.out.println(longTest);				
+		
+		longTest = testList.stream().mapToLong(t -> t.getValue()).sum();
 		System.out.println(longTest);
 				
 		testList.add(new Test("one", 1l));
@@ -46,6 +49,6 @@ public class Reduce {
 			e.printStackTrace();
 		}
 		
-		System.out.println(longTest);
+		System.out.println(longTest);		
 	}
 }
