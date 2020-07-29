@@ -15,7 +15,10 @@ public class StreamTests {
 	}
 	
 	private static void filterString() {
-		List<String> titles = new ArrayList<>();		
+		List<String> titles = new ArrayList<>();	
+		
+		titles.stream().filter(s -> s.contains("1")).forEach(s -> System.out.println(s));
+		
 		titles.add("TITLE1");
 		titles.add("TITLE2");
 		titles.add("TITLE3");
